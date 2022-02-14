@@ -17,7 +17,8 @@ def main():
                          'Java, Spring Framework', 'Teamwork, Communication', 5)
     vac1 = md.Vacancy('Senior Python Developer', 'Django, Flask, Django REST framework, API', 5)
     vac2 = md.Vacancy('Senior Java Developer', 'Spring Framework, SDK, API', 5)
-    cand3.work()
+
+    # cand3.work()
 
 
 if __name__ == '__main__':
@@ -29,4 +30,4 @@ if __name__ == '__main__':
                             datefmt='%d/%m/%Y %H:%M:%S',
                             level=logging.ERROR)
         logging.exception('{0}: {1}'.format(exp.__class__.__name__, exp))
-
+        raise

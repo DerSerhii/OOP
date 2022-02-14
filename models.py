@@ -59,9 +59,10 @@ class Employee:
         """
         Default: defines the salary for the amount of days
         Passing the second argument "cur": defines the salary at the current moment from the beginning of the month
+        Note: argument "cur" - case insensitive
         """
 
-        if current_salary == "cur":
+        if current_salary and current_salary.lower() == "cur":
             return self.salary_day * self.calculation_business_day()
 
         return amount_day * self.salary_day
