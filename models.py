@@ -56,7 +56,7 @@ class Employee:
         return bus_days
 
     def check_salary(self, amount_day: int, current_salary: str = None):
-        """
+        """Method check_salary is used to calculate the employee's salary.
         Default: defines the salary for the amount of days
         Passing the second argument "cur": defines the salary at the current moment from the beginning of the month
         Note: argument "cur" - case insensitive
@@ -78,7 +78,6 @@ class Employee:
 
 
 class Recruiter(Employee):
-
     def __str__(self):
         return f"{self.__class__.__name__}: {self.full_name}"
 
@@ -150,7 +149,6 @@ class Programmer(Employee):
 
 
 class Candidate:
-
     def __init__(self, full_name, email, technologies, main_skill, main_skill_grade):
         self.full_name = full_name
         self.email = email
@@ -165,7 +163,6 @@ class Candidate:
 
 
 class Vacancy:
-
     def __init__(self, title, main_skill, main_skill_level):
         self.title = title
         self.main_skill = main_skill
@@ -176,3 +173,4 @@ class UnableToWorkException(AttributeError):
     def __init__(self, message):
         self.message = message
         super().__init__(self.message)
+
