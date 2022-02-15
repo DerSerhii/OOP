@@ -1,6 +1,7 @@
 olrecrut@gmail.com
 romprog@gmail.com
 boris_125@gmail.com
+<<<<<<< HEAD
 olrecrut@gmail.com
 romprog@gmail.com
 boris_125@gmail.com
@@ -100,3 +101,5 @@ boris_125@gmail.com
 olrecrut@gmail.com
 romprog@gmail.com
 boris_125@gmail.com
+=======
+>>>>>>> origin/main
