@@ -1,3 +1,5 @@
+import csv
+import requests
 import datetime as dt
 
 
@@ -11,6 +13,10 @@ class Employee:
         self.email = email
         # self.validate_email(self.email)
         self.save_email(self.email)
+
+    @property
+    def info(self):
+        return f"{self.__class__.__name__}|\t{self.full_name}: {self.calculation_business_day()} days worked this month"
 
     def __lt__(self, other):
         return f"{self.TEXT_COMPARISON} {self.salary_day < other.salary_day}"
@@ -161,6 +167,31 @@ class Candidate:
             raise UnableToWorkException('I’m not hired yet, lol')
         raise self.__getattribute__(name)
 
+    def __repr__(self):
+        return f"{self.full_name} {self.email}"
+
+    @classmethod
+    def input_candidates(cls, file, url=None):
+        FILE_SAVE = 'candidates_inet.csv'
+
+        if url:
+            req = requests.get(url, stream=True)
+            if req.status_code == 200:
+                with open(FILE_SAVE, 'w') as file:
+                    file.write(str(req.content))
+            file = FILE_SAVE
+
+        with open(file) as csvfile:
+            reader = csv.reader(csvfile)
+            header = next(reader)
+            headers = list(map(lambda x: x.lower().replace(' ', '_'), header))
+
+            candidates_dict = []
+            for row in reader:
+                candidates_dict.append(dict(zip(headers, row)))
+
+            return [cls(**dict(data)) for data in candidates_dict]
+
 
 class Vacancy:
     def __init__(self, title, main_skill, main_skill_level):
@@ -173,4 +204,3 @@ class UnableToWorkException(AttributeError):
     def __init__(self, message):
         self.message = message
         super().__init__(self.message)
-

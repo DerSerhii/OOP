@@ -10,15 +10,17 @@ def main():
     prog2 = md.Programmer('Boris Koder', 170, 'boris_125@gmail.com',
                           'Python, Git&GitHub, PyQT5, PyGame')
     cand1 = md.Candidate('Ivan Skriptov', 'ivan_sk@gmail.com', 'Javascript, React, Angular',
-                         'Self-management, Willingness to learn', 4)
+                         'Self-management, Willingness to learn', 'Junior')
     cand2 = md.Candidate('Igor Pytonsky', 'pytonsky_2000@ukr.net', 'Python, Django, Django REST framework',
-                         'Leadership, Critical thinking', 5)
+                         'Leadership, Critical thinking', 'Junior')
     cand3 = md.Candidate('Oleg Bekendin', 'obl12021999@gmail.com',
-                         'Java, Spring Framework', 'Teamwork, Communication', 5)
-    vac1 = md.Vacancy('Senior Python Developer', 'Django, Flask, Django REST framework, API', 5)
-    vac2 = md.Vacancy('Senior Java Developer', 'Spring Framework, SDK, API', 5)
+                         'Java, Spring Framework', 'Teamwork, Communication', 'Junior')
+    vac1 = md.Vacancy('Senior Python Developer', 'Django, Flask, Django REST framework, API', 'Junior')
+    vac2 = md.Vacancy('Senior Java Developer', 'Spring Framework, SDK, API', 'Junior')
 
-    cand3.work()
+    # cand3.work()
+    print(prog2.info)
+    print(md.Candidate.input_candidates('candidates.csv'))
 
 
 if __name__ == '__main__':
