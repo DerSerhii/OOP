@@ -20,7 +20,9 @@ def main():
 
     # cand3.work()
     print(prog2.info)
-    print(md.Candidate.input_candidates('candidates.csv'))
+    print(md.Candidate.input_candidates('candidates.csv',
+                                        'https://bitbucket.org/ivnukov/lesson2/raw'
+                                        '/4f59074e6fbb552398f87636b5bf089a1618da0a/candidates.csv'))
 
 
 if __name__ == '__main__':

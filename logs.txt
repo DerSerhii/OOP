@@ -627,3 +627,106 @@ Traceback (most recent call last):
   File "C:\Python39\lib\encodings\cp1252.py", line 23, in decode
     return codecs.charmap_decode(input,self.errors,decoding_table)[0]
 UnicodeDecodeError: 'charmap' codec can't decode byte 0x81 in position 115: character maps to <undefined>
+
+------------------------------ERROR------------------------------
+20/02/2022 22:35:22 - TypeError: write() argument must be str, not bytes
+Traceback (most recent call last):
+  File "F:\IT\MyScripts\oop\app.py", line 28, in <module>
+    main()
+  File "F:\IT\MyScripts\oop\app.py", line 23, in main
+    print(md.Candidate.input_candidates('candidates.csv', 'https://bitbucket.org/ivnukov/lesson2/src/master/candidates.csv'))
+  File "F:\IT\MyScripts\oop\models.py", line 182, in input_candidates
+    file.write(req.content)
+TypeError: write() argument must be str, not bytes
+
+------------------------------ERROR------------------------------
+20/02/2022 22:35:43 - TypeError: write() argument must be str, not bytes
+Traceback (most recent call last):
+  File "F:\IT\MyScripts\oop\app.py", line 28, in <module>
+    main()
+  File "F:\IT\MyScripts\oop\app.py", line 23, in main
+    print(md.Candidate.input_candidates('candidates.csv', 'https://bitbucket.org/ivnukov/lesson2/src/master/candidates.csv'))
+  File "F:\IT\MyScripts\oop\models.py", line 182, in input_candidates
+    file.write(req.content)
+TypeError: write() argument must be str, not bytes
+
+------------------------------ERROR------------------------------
+20/02/2022 22:35:50 - TypeError: __init__() got an unexpected keyword argument '<!doctype_html>'
+Traceback (most recent call last):
+  File "F:\IT\MyScripts\oop\app.py", line 28, in <module>
+    main()
+  File "F:\IT\MyScripts\oop\app.py", line 23, in main
+    print(md.Candidate.input_candidates('candidates.csv', 'https://bitbucket.org/ivnukov/lesson2/src/master/candidates.csv'))
+  File "F:\IT\MyScripts\oop\models.py", line 195, in input_candidates
+    return [cls(**dict(data)) for data in candidates_dict]
+  File "F:\IT\MyScripts\oop\models.py", line 195, in <listcomp>
+    return [cls(**dict(data)) for data in candidates_dict]
+TypeError: __init__() got an unexpected keyword argument '<!doctype_html>'
+
+------------------------------ERROR------------------------------
+20/02/2022 22:36:17 - AttributeError: '_io.BufferedWriter' object has no attribute 'writerow'
+Traceback (most recent call last):
+  File "F:\IT\MyScripts\oop\app.py", line 28, in <module>
+    main()
+  File "F:\IT\MyScripts\oop\app.py", line 23, in main
+    print(md.Candidate.input_candidates('candidates.csv', 'https://bitbucket.org/ivnukov/lesson2/src/master/candidates.csv'))
+  File "F:\IT\MyScripts\oop\models.py", line 182, in input_candidates
+    file.writerow(req.content)
+AttributeError: '_io.BufferedWriter' object has no attribute 'writerow'
+
+------------------------------ERROR------------------------------
+20/02/2022 22:36:28 - AttributeError: '_io.BufferedWriter' object has no attribute 'writerow'
+Traceback (most recent call last):
+  File "F:\IT\MyScripts\oop\app.py", line 28, in <module>
+    main()
+  File "F:\IT\MyScripts\oop\app.py", line 23, in main
+    print(md.Candidate.input_candidates('candidates.csv', 'https://bitbucket.org/ivnukov/lesson2/src/master/candidates.csv'))
+  File "F:\IT\MyScripts\oop\models.py", line 182, in input_candidates
+    file.writerow(str(req.content))
+AttributeError: '_io.BufferedWriter' object has no attribute 'writerow'
+
+------------------------------ERROR------------------------------
+20/02/2022 22:36:38 - TypeError: a bytes-like object is required, not 'str'
+Traceback (most recent call last):
+  File "F:\IT\MyScripts\oop\app.py", line 28, in <module>
+    main()
+  File "F:\IT\MyScripts\oop\app.py", line 23, in main
+    print(md.Candidate.input_candidates('candidates.csv', 'https://bitbucket.org/ivnukov/lesson2/src/master/candidates.csv'))
+  File "F:\IT\MyScripts\oop\models.py", line 182, in input_candidates
+    file.write(str(req.content))
+TypeError: a bytes-like object is required, not 'str'
+
+------------------------------ERROR------------------------------
+22/02/2022 13:47:43 - TypeError: a bytes-like object is required, not 'str'
+Traceback (most recent call last):
+  File "F:\IT\MyScripts\oop\app.py", line 28, in <module>
+    main()
+  File "F:\IT\MyScripts\oop\app.py", line 23, in main
+    print(md.Candidate.input_candidates('candidates.csv', 'https://raw.bitbucket.org/ivnukov/lesson2/src/master/candidates.csv'))
+  File "F:\IT\MyScripts\oop\models.py", line 182, in input_candidates
+    file.write(str(req.content))
+TypeError: a bytes-like object is required, not 'str'
+
+------------------------------ERROR------------------------------
+22/02/2022 13:47:53 - UnicodeDecodeError: 'charmap' codec can't decode byte 0x81 in position 406: character maps to <undefined>
+Traceback (most recent call last):
+  File "F:\IT\MyScripts\oop\app.py", line 28, in <module>
+    main()
+  File "F:\IT\MyScripts\oop\app.py", line 23, in main
+    print(md.Candidate.input_candidates('candidates.csv', 'https://raw.bitbucket.org/ivnukov/lesson2/src/master/candidates.csv'))
+  File "F:\IT\MyScripts\oop\models.py", line 192, in input_candidates
+    for row in reader:
+  File "C:\Python39\lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x81 in position 406: character maps to <undefined>
+
+------------------------------ERROR------------------------------
+22/02/2022 14:45:52 - TypeError: write() argument must be str, not bytes
+Traceback (most recent call last):
+  File "F:\IT\MyScripts\oop\app.py", line 28, in <module>
+    main()
+  File "F:\IT\MyScripts\oop\app.py", line 23, in main
+    print(md.Candidate.input_candidates('candidates.csv', 'https://bitbucket.org/ivnukov/lesson2/raw/4f59074e6fbb552398f87636b5bf089a1618da0a/candidates.csv'))
+  File "F:\IT\MyScripts\oop\models.py", line 182, in input_candidates
+    file.write(req.content)
+TypeError: write() argument must be str, not bytes

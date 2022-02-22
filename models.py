@@ -176,10 +176,12 @@ class Candidate:
 
         if url:
             req = requests.get(url, stream=True)
+            print(req.status_code)
             if req.status_code == 200:
-                with open(FILE_SAVE, 'w') as file:
-                    file.write(str(req.content))
+                with open(FILE_SAVE, 'wb') as file:
+                    file.write(req.content)
             file = FILE_SAVE
+            print(file)
 
         with open(file) as csvfile:
             reader = csv.reader(csvfile)
